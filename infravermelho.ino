@@ -10,8 +10,8 @@ void setup() {
   Serial.begin(9600);                       // Monitor velocidade 9600 bps
   irrecv.enableIRIn();
   //Definindo portas digitais
-  pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
 }
 
 void loop() {
@@ -33,15 +33,15 @@ void loop() {
     }
 
     if (Port1 == true) {
-      digitalWrite(7, LOW);
+      digitalWrite(8, LOW);
     } else {
-      digitalWrite(7, HIGH);
+      digitalWrite(8, HIGH);
     }
 
     if (Port2 == true) {
-      digitalWrite(6, LOW);
+      digitalWrite(7, LOW);
     } else {
-      digitalWrite(6, HIGH);
+      digitalWrite(7, HIGH);
     }
 
     irrecv.resume(); // Resetando o sensor
